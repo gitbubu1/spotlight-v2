@@ -4,7 +4,8 @@
   box-sizing: border-box;
 }
 
-html, body {
+html,
+body {
   height: 100%;
   width: 100%;
   overflow: hidden;
@@ -15,7 +16,6 @@ html, body {
   --y: 400px;
 }
 
-/* Background Video */
 #bg-video {
   position: fixed;
   top: 0;
@@ -26,7 +26,6 @@ html, body {
   z-index: 0;
 }
 
-/* Spotlight overlay */
 .box {
   position: fixed;
   height: 100%;
@@ -34,8 +33,28 @@ html, body {
   z-index: 2;
   pointer-events: none;
   background: radial-gradient(
-      200px at var(--x) var(--y),
-      rgba(255, 255, 255, 0) 0%,
-      rgba(0, 0, 0, 0.726) 70%
+    150px at var(--x) var(--y),
+    rgba(255, 255, 255, 0) 0%,
+    rgba(0, 0, 0, 0.608) 70%
   );
+}
+
+#soundToggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 5;
+  background: rgba(0, 0, 0, 0.5);
+  border: 1px solid white;
+  color: white;
+  padding: 10px 14px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 22px;
+  backdrop-filter: blur(5px);
+  transition: 0.2s ease;
+}
+
+#soundToggle:hover {
+  background: rgba(255, 255, 255, 0.2);
 }
